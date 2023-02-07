@@ -282,6 +282,14 @@
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
+            <li class="nav-item">
+              <a href="{{ url('member') }}" class="nav-link" {{ request()->is('member') ? 'active' : ''}}>
+                <i class="fa-solid fa-users"></i>
+                <p>
+              member
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
           {{-- </li>
           <li class="nav-item">
             <a href="{{ url('book') }}" class="nav-link">
