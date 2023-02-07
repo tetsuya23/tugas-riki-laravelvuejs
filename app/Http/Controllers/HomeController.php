@@ -24,9 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // $members = Member::with('user')->get();
+        $members = member::with('user')->get();
 
-        // return $members;
+        return $members;
         return view('home');
     }
 }
