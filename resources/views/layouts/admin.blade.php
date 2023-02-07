@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Dashboard</title>
+  <script src="https://kit.fontawesome.com/6ca4560224.js" crossorigin="anonymous"></script>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -256,8 +257,8 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{ url('home') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ url('home') }}" class="nav-link {{ request()->is('home') ? 'active' : ''}}">
+              <i class="fa-solid fa-house"></i>
               <p>
                 home
                 <span class="right badge badge-danger">New</span>
@@ -265,10 +266,37 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{ url('catalog') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ url('catalog') }}" class="nav-link {{ request()->is('catalog') ? 'active' : ''}}">
+              <i class="fa-solid fa-tag"></i>
               <p>
             catalog
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('publisher') }}" class="nav-link" {{ request()->is('publisher') ? 'active' : ''}}>
+              <i class="fa-solid fa-users"></i>
+              <p>
+            publisher
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          {{-- </li>
+          <li class="nav-item">
+            <a href="{{ url('book') }}" class="nav-link">
+              <i class="fa-sharp fa-solid fa-sausage"></i>
+              <p>
+            book
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li> --}}
+          <li class="nav-item">
+            <a href="{{ url('book') }}" class="nav-link" {{ request()->is('book') ? 'active' : ''}}>
+              <i class="fa-solid fa-fish"></i>
+              <p>
+            book {{ request()->is('home') ? 'active' : ''}}
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Publisher;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\returnValue;
+
 class PublisherController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class PublisherController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.publisher.index');
     }
 
     /**
