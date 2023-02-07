@@ -88,7 +88,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              {{-- <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle"> --}}
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -104,7 +104,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              {{-- <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3"> --}}
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -120,7 +120,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              {{-- <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3"> --}}
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -193,17 +193,17 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      {{-- <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
+      <span class="brand-text font-weight-light"></span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
+        {{-- <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
+        </div> --}}
         <div class="info">
           <a href="#" class="d-block">{{ auth()->user()->name}}</a>
         </div>
@@ -256,15 +256,24 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <a href="{{ url('home') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                home
                 <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ url('catalog') }}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+            catalog
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
@@ -858,7 +867,9 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> --}}
+    </ul>
+    </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -885,7 +896,26 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
+    {{-- {-- <section class="content"> --}}
+      <div class="container-fluid">
+        @yield('content')
+        <!-- Small boxes (Stat box) -->
+        {{-- <div class="row">
+          <div class="col-lg-3 col-6"> --}}
+            <!-- small box -->
+            {{-- <div class="small-box bg-info">
+              <div class="inner">
+                <h3>150</h3>
+
+                <p>New Orders</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div> --}}
+    {{-- <section class="content">
       <div class="container-fluid">
         @yield('content')
         <!-- Small boxes (Stat box) -->
@@ -1467,21 +1497,21 @@
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>
+    <!-- /.content --> --}}
+  {{-- </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
-  </footer>
+      <b>Version</b> 3.2.0 --}}
+    {{-- </div>
+  </footer> --}}
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  {{-- <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
-  </aside>
+  </aside> --}}
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
@@ -1510,7 +1540,7 @@
 <script src="plugins/daterangepicker/daterangepicker.js"></script> --}}
 <!-- Tempusdominus Bootstrap 4 -->
 {{-- <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> --}}
-// <!-- Summernote -->
+ <!-- Summernote -->
 {{-- <script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars --> --}}
 <script src="{{ asset('assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
